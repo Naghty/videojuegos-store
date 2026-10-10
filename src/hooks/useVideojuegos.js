@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 
-// Simula la carga de los videojuegos desde una fuente externa (API o archivo)
 function useVideojuegos() {
   const [videojuegos, setVideojuegos] = useState([]);
   const [cargando, setCargando] = useState(true);
@@ -22,7 +21,6 @@ function useVideojuegos() {
 
         const datos = await respuesta.json();
 
-        // Retardo artificial para simular una API real
         await new Promise((resolver) => setTimeout(resolver, 500));
 
         if (!cancelado) {

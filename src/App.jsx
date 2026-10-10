@@ -8,10 +8,8 @@ import Footer from './components/Footer';
 import './App.css';
 
 function App() {
-  // Estado de los videojuegos, cargado dinamicamente desde una fuente externa
   const { videojuegos, setVideojuegos, cargando, error } = useVideojuegos();
 
-  // Estado de la categoria activa para el filtrado
   const [categoriaActiva, setCategoriaActiva] = useState('todos');
 
   function agregarJuego(nuevoJuego) {
