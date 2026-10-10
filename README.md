@@ -75,33 +75,4 @@ npm run build
 npm run preview
 ```
 
-## Despliegue en GitHub Pages
 
-`vite.config.js` ya tiene configurado:
-
-```js
-base: '/videojuegos-store/',
-```
-
-Si tu repositorio se llama distinto, cambia ese valor por `/NOMBRE-DE-TU-REPO/`
-antes de desplegar.
-
-```bash
-git init
-git add .
-git commit -m "EFT - GameZone"
-git branch -M main
-git remote add origin https://github.com/USUARIO/videojuegos-store.git
-git push -u origin main
-
-npm run deploy
-```
-
-`npm run deploy` compila el proyecto y publica la carpeta `dist` en la rama
-`gh-pages` automaticamente (usa el paquete `gh-pages` ya incluido en
-`devDependencies`).
-
-Luego en GitHub: Settings > Pages > Source: Deploy from a branch > Branch:
-`gh-pages` / `root`.
-
-La URL publica queda como `https://USUARIO.github.io/videojuegos-store/`
